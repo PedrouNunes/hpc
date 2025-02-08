@@ -8,16 +8,10 @@ echo "Size,Sequential,Multicore,GPU,Speedup_Multicore,Speedup_GPU" > $output_fil
 for size in "${sizes[@]}"; do
     echo "Rodando testes para tamanho $size x $size"
 
+    seq_time=$(./kde_sequential $size)
+    par_time=$(./kde_parallel $size)
+    gpu_time=$(./kde_gpu $size)
 
-    seq_time=$(./build/kde_sequential $size | grep -oE '[0-9]+\.[0-9]+')
-    par_time=$(./build/kde_parallel $size | grep -oE '[0-9]+\.[0-9]+')
-    gpu_time=$(./build/kde_gpu $size | grep -oE '[0-9]+\.[0-9]+')
-
-    seq_time=${seq_time:-0.0}
-    par_time=${par_time:-0.0}
-    gpu_time=${gpu_time:-0.0}
-
-    # Calcula speedup
     speedup_multicore=$(echo "$seq_time / $par_time" | bc -l)
     speedup_gpu=$(echo "$seq_time / $gpu_time" | bc -l)
 
