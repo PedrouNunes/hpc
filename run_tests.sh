@@ -9,9 +9,9 @@ for size in "${sizes[@]}"; do
     echo "Rodando testes para tamanho $size x $size"
 
 
-    seq_time=$(./build/kde_sequential $size | grep -oE '[0-9]+\.[0-9]+')
-    par_time=$(./build/kde_parallel $size | grep -oE '[0-9]+\.[0-9]+')
-    gpu_time=$(./build/kde_gpu $size | grep -oE '[0-9]+\.[0-9]+')
+    seq_time=$(./kde_sequential $size | grep -oE '[0-9]+\.[0-9]+')
+    par_time=$(./kde_parallel $size | grep -oE '[0-9]+\.[0-9]+')
+    gpu_time=$(./kde_gpu $size | grep -oE '[0-9]+\.[0-9]+')
 
     seq_time=${seq_time:-0.0}
     par_time=${par_time:-0.0}
