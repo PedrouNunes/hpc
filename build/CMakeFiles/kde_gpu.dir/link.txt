@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/kde_gpu.dir/kde_gpu.cpp.o -o kde_gpu  /usr/lib/gcc/x86_64-linux-gnu/12/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 

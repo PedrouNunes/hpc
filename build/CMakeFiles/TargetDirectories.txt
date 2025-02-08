@@ -1,0 +1,5 @@
+/home/alunos/tei/2024/tei26699/hpc/build/CMakeFiles/kde_sequential.dir
+/home/alunos/tei/2024/tei26699/hpc/build/CMakeFiles/kde_parallel.dir
+/home/alunos/tei/2024/tei26699/hpc/build/CMakeFiles/kde_gpu.dir
+/home/alunos/tei/2024/tei26699/hpc/build/CMakeFiles/edit_cache.dir
+/home/alunos/tei/2024/tei26699/hpc/build/CMakeFiles/rebuild_cache.dir
